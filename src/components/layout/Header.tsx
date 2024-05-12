@@ -1,8 +1,9 @@
 import Link from "next/link";
+import styles from "@/styles/Home.module.css";
 
-export default function Header() {
+const Header = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <h1>
         <Link href="/">logo</Link>
       </h1>
@@ -10,6 +11,12 @@ export default function Header() {
         <Link href="/about">about</Link>
         <Link href="/post">post</Link>
       </nav>
+      <nav>
+        <Link href="/">login</Link>
+        <Link href="/">회원가입</Link>
+      </nav>
     </header>
   );
-}
+};
+
+export default Header;
