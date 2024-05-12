@@ -1,11 +1,15 @@
 import Layout from "@/components/layout/Layout";
 import { AppProps } from "next/app";
+//import app from "@/firebase/firebase";
+import { AuthProvider } from "@/firebase/auth";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <AuthProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </AuthProvider>
   );
 }
 
